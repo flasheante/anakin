@@ -2,7 +2,7 @@ import type { Release } from "./types";
 import { socialLinks } from "./social";
 
 // Newest first is not required; the site sorts by year.
-// Until each release has its own URL, links fall back to the artist page.
+// Until each release has its own URL, links fall back to the artist pages.
 export const releases: Release[] = [
   {
     id: "fiesta-distroy-vol-1",
@@ -10,6 +10,7 @@ export const releases: Release[] = [
     year: 2024,
     type: "album",
     spotifyUrl: socialLinks.spotify,
+    bandcampUrl: socialLinks.bandcamp,
     tracks: [
       { title: "José Antinatural", duration: "02:36" },
       { title: "Una Trampa", duration: "02:21" },
@@ -23,6 +24,7 @@ export const releases: Release[] = [
     year: 2021,
     type: "album",
     spotifyUrl: socialLinks.spotify,
+    bandcampUrl: socialLinks.bandcamp,
   },
   {
     id: "re-firme",
@@ -30,6 +32,7 @@ export const releases: Release[] = [
     year: 2020,
     type: "album",
     spotifyUrl: socialLinks.spotify,
+    bandcampUrl: socialLinks.bandcamp,
   },
   {
     id: "mas-alla-de",
@@ -37,5 +40,6 @@ export const releases: Release[] = [
     year: 2019,
     type: "album",
     spotifyUrl: socialLinks.spotify,
+    bandcampUrl: socialLinks.bandcamp,
   },
 ];

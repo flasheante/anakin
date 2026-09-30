@@ -4,9 +4,9 @@
  */
 export const socialLinks = {
   spotify: "https://open.spotify.com/artist/13vo008hHsTD8ayhNOK8ZF",
-  bandcamp: "",
-  instagram: "",
-  youtube: "",
+  bandcamp: "https://ana-kin.bandcamp.com/",
+  instagram: "https://www.instagram.com/anakinbanda/",
+  youtube: "https://www.youtube.com/@anakinbanda",
 };
 
 export type SocialKey = keyof typeof socialLinks;
