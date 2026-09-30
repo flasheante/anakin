@@ -22,7 +22,7 @@ export const socialLabels: Record<SocialKey, string> = {
 export const socialOrder: SocialKey[] = ["spotify", "bandcamp", "youtube", "instagram"];
 
 export const contact = {
-  bookingEmail: "booking@example.com",
+  bookingEmail: "anakin.cpr@gmail.com",
 };
 
 // Footer credit for whoever built the site.

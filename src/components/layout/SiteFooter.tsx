@@ -18,7 +18,7 @@ export function SiteFooter() {
         <p>
           <span className="text-acid">56K MODEM FRIENDLY</span>
         </p>
-        <p className="text-paper">ANAKIN © 1997–{now.getFullYear()}</p>
+        <p className="text-paper">ANAKIN © 2019 –{now.getFullYear()}</p>
       </div>
 
       <p className="pixel mt-6 text-lg text-dust">

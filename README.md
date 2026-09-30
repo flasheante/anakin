@@ -34,7 +34,7 @@ Todo lo editable está en `src/data/`. No hace falta tocar componentes.
 ## Antes de publicar (pendientes)
 
 - [ ] Dominio real en `src/data/site.ts` (o `NEXT_PUBLIC_SITE_URL`). Se usa para canonical, sitemap y Open Graph.
-- [ ] Mail de booking real (hoy `booking@example.com`).
+- [ ] Mail de booking real (hoy `anakin.cpr@gmail.com`).
 - [ ] Más fotos: por ahora el archivo tiene la foto B/N y el flyer de la gira.
 - [ ] Portadas y links propios de cada disco (hoy apuntan a los perfiles de Spotify y Bandcamp).
 - [ ] Confirmar tipo de cada disco (álbum/EP) y el tracklist de *Fiesta Distroy Vol. 1*: los temas salen de la maqueta del brief y el tercero figura como "El Pináculo...".
