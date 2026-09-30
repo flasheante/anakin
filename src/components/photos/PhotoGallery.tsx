@@ -46,7 +46,7 @@ export function PhotoGallery({ photos }: { photos: GalleryPhoto[] }) {
 
   return (
     <>
-      <ul className="columns-2 gap-4 md:columns-3 [&>li]:mb-4">
+      <ul className={`columns-2 gap-4 [&>li]:mb-4 ${photos.length > 2 ? "md:columns-3" : ""}`}>
         {photos.map((p, i) => (
           <li key={p.id} className={`break-inside-avoid ${spans[i % spans.length]}`}>
             <button

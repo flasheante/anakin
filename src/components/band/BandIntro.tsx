@@ -12,9 +12,16 @@ export function BandIntro({ headingLevel = 2 }: { headingLevel?: 2 | 3 }) {
           <span aria-hidden="true" className="tape -top-2 left-6 -rotate-6" />
           <span aria-hidden="true" className="tape -top-2 right-6 rotate-3" />
           <div className="photocopy photocopy-hover relative aspect-[3/2] border border-paper">
-            <Image src={site.bandPhoto} alt={site.bandPhotoAlt} fill sizes="(min-width: 768px) 560px, 92vw" className="object-cover" unoptimized={site.bandPhoto.endsWith(".svg")} />
+            <Image
+              src={site.bandPhoto.src}
+              alt={site.bandPhoto.alt}
+              fill
+              sizes="(min-width: 768px) 560px, 92vw"
+              className="object-cover"
+              style={{ objectPosition: site.bandPhoto.position }}
+            />
           </div>
-          <figcaption className="pixel mt-2 text-lg text-dust">FIG. 1 — ANAKIN, MENDOZA</figcaption>
+          <figcaption className="pixel mt-2 text-lg text-dust">{site.bandPhoto.caption}</figcaption>
         </figure>
       )}
       <div className="border-l-4 border-blood pl-5">

@@ -36,7 +36,7 @@ Todo lo editable está en `src/data/`. No hace falta tocar componentes.
 - [ ] Dominio real en `src/data/site.ts` (o `NEXT_PUBLIC_SITE_URL`). Se usa para canonical, sitemap y Open Graph.
 - [ ] Mail de booking real (hoy `booking@example.com`).
 - [ ] Links de Bandcamp, Instagram y YouTube.
-- [ ] Fotos reales: reemplazar `placeholder-*.svg` y `band-placeholder.svg`.
+- [ ] Más fotos: por ahora el archivo tiene la foto B/N y el flyer de la gira.
 - [ ] Portadas y links propios de cada disco (hoy apuntan al perfil de Spotify).
 - [ ] Confirmar tipo de cada disco (álbum/EP) y el tracklist de *Fiesta Distroy Vol. 1*: los temas salen de la maqueta del brief y el tercero figura como "El Pináculo...".
 - [ ] Revisar la bio de `members.ts` (es provisoria).

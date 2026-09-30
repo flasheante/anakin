@@ -37,24 +37,24 @@ export function Hero() {
       </div>
       <AsciiRule />
 
-      {site.bandPhoto && (
+      {site.heroPhoto && (
         <figure className="relative mx-auto mt-10 max-w-3xl tilt-r">
           <span aria-hidden="true" className="tape -top-2 left-8 -rotate-6" />
           <span aria-hidden="true" className="tape -top-2 right-8 rotate-6" />
           <div className="photocopy photocopy--red relative aspect-[3/2] border border-paper">
             <Image
-              src={site.bandPhoto}
-              alt={site.bandPhotoAlt}
+              src={site.heroPhoto.src}
+              alt={site.heroPhoto.alt}
               fill
               priority
               sizes="(min-width: 800px) 768px, 92vw"
               className="object-cover"
-              unoptimized={site.bandPhoto.endsWith(".svg")}
+              style={{ objectPosition: site.heroPhoto.position }}
             />
           </div>
           <figcaption aria-hidden="true" className="pixel mt-2 flex justify-between text-lg text-dust">
-            <span>ANAKIN_PROMO.JPG</span>
-            <span>34KB · 640x427</span>
+            <span>{site.heroPhoto.caption}</span>
+            <span>B/N · 1997 MODE</span>
           </figcaption>
         </figure>
       )}
