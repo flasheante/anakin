@@ -1,6 +1,7 @@
 import { VisitorCounter } from "@/components/retro/VisitorCounter";
 import { AsciiRule } from "@/components/retro/AsciiRule";
 import { SocialLinks } from "@/components/contact/SocialLinks";
+import { webmaster } from "@/data/social";
 
 export function SiteFooter() {
   const now = new Date();
@@ -20,7 +21,13 @@ export function SiteFooter() {
         <p className="text-paper">ANAKIN © 1997–{now.getFullYear()}</p>
       </div>
 
-      <p className="pixel mt-6 text-lg text-dust">@flasheante</p>
+      <p className="pixel mt-6 text-lg text-dust">
+        Webmaster:{" "}
+        <a href={webmaster.url} target="_blank" rel="noopener noreferrer">
+          {webmaster.handle}
+          <span className="sr-only"> (se abre en una pestaña nueva)</span>
+        </a>
+      </p>
 
       <AsciiRule dashed className="mt-6" />
     </footer>

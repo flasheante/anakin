@@ -24,3 +24,9 @@ export const socialOrder: SocialKey[] = ["spotify", "bandcamp", "youtube", "inst
 export const contact = {
   bookingEmail: "booking@example.com",
 };
+
+// Footer credit for whoever built the site.
+export const webmaster = {
+  handle: "@flasheante",
+  url: "https://www.instagram.com/flasheante",
+};
