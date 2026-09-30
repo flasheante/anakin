@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ANAKIN — sitio oficial
 
-## Getting Started
+Web de **ANAKIN**, banda de Mendoza, Argentina. Una página del internet underground de 1997, hecha con Next.js 16 (App Router), React 19, TypeScript y Tailwind CSS 4. Sin backend: todo el contenido está en archivos TypeScript.
 
-First, run the development server:
+## Uso
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev      # http://localhost:3000
+npm test         # tests de fechas (getNextShow, isPastShow, ...)
+npm run lint
+npm run build && npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Cómo editar el contenido
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Todo lo editable está en `src/data/`. No hace falta tocar componentes.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Qué | Archivo |
+| --- | --- |
+| Fechas de shows | `src/data/shows.ts` |
+| Discos | `src/data/releases.ts` |
+| Integrantes y bio | `src/data/members.ts` |
+| Fotos | `src/data/photos.ts` + archivos en `public/images/photos/` |
+| Redes y mail de booking | `src/data/social.ts` |
+| Dominio, título, descripción, foto de banda | `src/data/site.ts` |
 
-## Learn More
+- **Shows**: agregá un objeto con `date` en formato `AAAA-MM-DD`. El orden no importa. El próximo show y el archivo de shows pasados se calculan solos (hora de Mendoza). No borres las fechas viejas: forman el archivo. Campos opcionales: `ticketUrl`, `eventUrl`, `mapUrl`, `description`.
+- **Redes**: si un link queda vacío (`""`), se muestra como "SOON".
+- **Fotos**: subí los originales sin editar. El efecto fotocopia se aplica con CSS y el lightbox muestra la foto original.
+- **Logo**: reemplazá `src/assets/source/logo-original.jpg` (fondo blanco) y corré `npm run logo && npm run icons`. Se recorta el fondo y se regeneran el logo de la web y los favicons.
+- **Portadas**: agregá `cover: "/images/covers/archivo.jpg"` a cada disco. Sin portada se genera una provisoria.
 
-To learn more about Next.js, take a look at the following resources:
+## Antes de publicar (pendientes)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [ ] Dominio real en `src/data/site.ts` (o `NEXT_PUBLIC_SITE_URL`). Se usa para canonical, sitemap y Open Graph.
+- [ ] Mail de booking real (hoy `booking@example.com`).
+- [ ] Links de Bandcamp, Instagram y YouTube.
+- [ ] Fotos reales: reemplazar `placeholder-*.svg` y `band-placeholder.svg`.
+- [ ] Portadas y links propios de cada disco (hoy apuntan al perfil de Spotify).
+- [ ] Confirmar tipo de cada disco (álbum/EP) y el tracklist de *Fiesta Distroy Vol. 1*: los temas salen de la maqueta del brief y el tercero figura como "El Pináculo...".
+- [ ] Revisar la bio de `members.ts` (es provisoria).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Estructura
 
-## Deploy on Vercel
+```
+src/
+├── app/            páginas (/, /music, /shows, /band, /photos, /contact), 404, SEO, íconos
+├── components/     layout, retro (design system), home, music, shows, band, photos, contact
+├── data/           contenido editable
+├── lib/            lógica de fechas (+ tests), metadata, JSON-LD, imagen OG
+└── styles/retro.css   texturas y efectos
+scripts/            generadores de favicon/cursores y fotos provisorias
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Easter eggs
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Contador de visitas falso en el footer (solo local, no trackea nada).
+- Webring y "DOWNLOAD THIS WEBSITE" llevan al 404 "THE INTERNET IS BROKEN".
+- Código Konami: ↑ ↑ ↓ ↓ ← → ← → B A.
