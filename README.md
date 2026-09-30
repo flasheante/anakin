@@ -52,8 +52,10 @@ src/
 scripts/            generadores de favicon/cursores y fotos provisorias
 ```
 
+## Contador de visitas
+
+El contador del footer es real: usa [Abacus](https://abacus.jasoncameron.dev), un servicio gratuito sin cuenta. Suma una visita por sesión de navegador y en `npm run dev` solo lee, así las pruebas locales no suman. La clave está en `visitCounter` (`src/data/site.ts`). Si el servicio no responde, el contador se oculta y el resto de la página funciona igual.
+
 ## Easter eggs
 
-- Contador de visitas falso en el footer (solo local, no trackea nada).
-- Webring y "DOWNLOAD THIS WEBSITE" llevan al 404 "THE INTERNET IS BROKEN".
 - Código Konami: ↑ ↑ ↓ ↓ ← → ← → B A.

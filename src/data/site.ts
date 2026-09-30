@@ -38,3 +38,9 @@ export const navItems = [
   { href: "/photos", label: "PHOTOS" },
   { href: "/contact", label: "CONTACT" },
 ] as const;
+
+/** Hit counter on abacus.jasoncameron.dev. Changing the namespace/key starts from zero. */
+export const visitCounter = {
+  namespace: "anakinbanda-web",
+  key: "visits",
+};
