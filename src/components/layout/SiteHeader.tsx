@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { site } from "@/data/site";
 import { GlitchText } from "@/components/retro/GlitchText";
-import { SiteNav } from "./SiteNav";
 
 export function SiteHeader() {
   const host = site.url.replace(/^https?:\/\//, "");
@@ -37,8 +36,6 @@ export function SiteHeader() {
           <p className="text-dust">{site.tagline}</p>
         </div>
       </div>
-
-      <SiteNav />
     </header>
   );
 }

@@ -8,6 +8,7 @@ import { formatShort, getNextShow } from "@/lib/shows";
 import { musicGroupJsonLd } from "@/lib/jsonld";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { SiteFooter } from "@/components/layout/SiteFooter";
+import { SiteNav } from "@/components/layout/SiteNav";
 import { Marquee } from "@/components/retro/Marquee";
 import { NoiseOverlay, Scanlines } from "@/components/retro/Overlays";
 import { KonamiCode } from "@/components/retro/KonamiCode";
@@ -70,6 +71,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <div className="site-shell mx-auto max-w-[1080px] border-x border-ash bg-ink sm:my-4 sm:border">
           <Marquee items={ticker} className="pixel border-b border-ash bg-yolk py-0.5 text-lg text-ink" />
           <SiteHeader />
+          <SiteNav />
           <main id="contenido" tabIndex={-1} className="focus:outline-none">
             {children}
           </main>

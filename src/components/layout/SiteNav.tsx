@@ -9,7 +9,7 @@ function isActive(pathname: string, href: string) {
   return href === "/" ? pathname === "/" : pathname.startsWith(href);
 }
 
-/** Desktop: HOME | MÚSICA | ... bar. Mobile: a no-JS <details> "[ MENU ]" list. */
+/** Desktop: HOME | MÚSICA | ... bar. Mobile: a no-JS <details> "[ MENU ]" list, stuck to the top while scrolling. */
 export function SiteNav() {
   const pathname = usePathname();
   const menu = useRef<HTMLDetailsElement>(null);
@@ -18,7 +18,7 @@ export function SiteNav() {
   };
 
   return (
-    <nav aria-label="Principal" className="border-y border-paper bg-ink">
+    <nav aria-label="Principal" className="sticky top-0 z-50 border-y border-paper bg-ink md:static">
       <ul className="hidden flex-wrap items-center justify-center gap-y-1 px-2 py-1 md:flex">
         {navItems.map((item, i) => (
           <li key={item.href} className="flex items-center">
@@ -45,7 +45,7 @@ export function SiteNav() {
             <span className="hidden group-open:inline">▲</span>
           </span>
         </summary>
-        <ul className="grid gap-2 border-t border-ash px-4 pt-3 pb-4">
+        <ul className="grid max-h-[calc(100dvh-3rem)] gap-2 overflow-y-auto border-t border-ash px-4 pt-3 pb-4">
           {navItems.map((item) => {
             const active = isActive(pathname, item.href);
             return (
