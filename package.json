@@ -12,6 +12,7 @@
     "logo": "node scripts/cutout-logo.mjs"
   },
   "dependencies": {
+    "@next/third-parties": "^16.3.7",
     "next": "16.3.7",
     "react": "19.2.8",
     "react-dom": "19.2.8"

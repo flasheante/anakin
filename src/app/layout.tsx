@@ -1,7 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { VT323 } from "next/font/google";
+import { GoogleTagManager } from "@next/third-parties/google";
 import "./globals.css";
-import { site } from "@/data/site";
+import { gtmId, site } from "@/data/site";
 import { shows } from "@/data/shows";
 import { formatShort, getNextShow } from "@/lib/shows";
 import { musicGroupJsonLd } from "@/lib/jsonld";
@@ -57,6 +58,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
 
   return (
     <html lang="es" className={vt323.variable}>
+      {gtmId && <GoogleTagManager gtmId={gtmId} />}
       <body className="page-texture pixel-cursor min-h-dvh">
         <a
           href="#contenido"

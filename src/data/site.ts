@@ -44,3 +44,6 @@ export const visitCounter = {
   namespace: "anakinbanda-web",
   key: "visits",
 };
+
+/** Google Tag Manager container. Empty string = GTM is not loaded. */
+export const gtmId = process.env.NEXT_PUBLIC_GTM_ID ?? "GTM-TPBP32ZC";
