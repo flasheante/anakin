@@ -34,7 +34,7 @@ export default function HomePage() {
       <NextShow show={getNextShow(shows, now)} now={now} />
 
       <Section labelledBy="home-music">
-        <SectionHead id="home-music" title="MUSIC" href="/music" cta="DISCOGRAFÍA →" />
+        <SectionHead id="home-music" title="MÚSICA" href="/music" cta="DISCOGRAFÍA →" />
         {latest && <MusicPlayer release={latest} />}
       </Section>
 
@@ -44,7 +44,7 @@ export default function HomePage() {
       </Section>
 
       <Section labelledBy="home-band">
-        <SectionHead id="home-band" title="THE BAND" href="/band" cta="LA BANDA →" />
+        <SectionHead id="home-band" title="LA BANDA" href="/band" cta="LA BANDAA →" />
         <BandIntro headingLevel={3} />
         <ul className="pixel mt-8 grid grid-cols-3 gap-2 text-center sm:gap-4">
           {members.map((m) => (
@@ -57,7 +57,7 @@ export default function HomePage() {
       </Section>
 
       <Section labelledBy="home-photos" className="border-t border-ash">
-        <SectionHead id="home-photos" title="PHOTO ARCHIVE" href="/photos" cta="VER TODO →" />
+        <SectionHead id="home-photos" title="ARCHIVO FOTOS" href="/photos" cta="VER TODO →" />
         <PhotoGrid limit={6} />
       </Section>
 

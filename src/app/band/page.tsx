@@ -16,7 +16,7 @@ export const metadata: Metadata = pageMetadata({
 export default function BandPage() {
   return (
     <Section>
-      <PageHeader path="BAND" title="THE BAND" />
+      <PageHeader path="BANDA" title="LA BANDA" />
       <BandIntro />
       <PixelHeading className="mt-14 mb-8" marks={["::", ""]}>
         LINE-UP

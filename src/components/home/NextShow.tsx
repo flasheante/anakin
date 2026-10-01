@@ -15,7 +15,7 @@ export function NextShow({ show, now = new Date() }: { show: Show | null; now?: 
   return (
     <Section id="next-show" labelledBy="next-show-title" className="border-y border-paper bg-blood text-ink">
       <PixelHeading level={2} id="next-show-title" className="text-center" marks={[">>>", "<<<"]} marksClassName="text-paper">
-        NEXT ATTACK
+        PRÓXIMO SHOW
       </PixelHeading>
 
       {show ? (

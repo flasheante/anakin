@@ -5,7 +5,7 @@ import { RetroButton } from "@/components/retro/RetroButton";
 export function ReleaseLinks({ release, className = "" }: { release: Release; className?: string }) {
   const links = [
     { label: "SPOTIFY", url: release.spotifyUrl },
-    { label: "BANDCAMP", url: release.bandcampUrl },
+    { label: "BANDACAMP", url: release.bandcampUrl },
     { label: "YOUTUBE", url: release.youtubeUrl },
   ].filter((l): l is { label: string; url: string } => Boolean(l.url));
 

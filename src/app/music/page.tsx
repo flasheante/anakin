@@ -19,7 +19,7 @@ export default function MusicPage() {
 
   return (
     <Section>
-      <PageHeader path="MUSIC" title="MUSIC" />
+      <PageHeader path="MUSICA" title="MÚSICA" />
       {latest && (
         <div className="mb-14">
           <MusicPlayer release={latest} />

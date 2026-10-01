@@ -9,7 +9,7 @@ function isActive(pathname: string, href: string) {
   return href === "/" ? pathname === "/" : pathname.startsWith(href);
 }
 
-/** Desktop: HOME | MUSIC | ... bar. Mobile: a no-JS <details> "[ MENU ]" list. */
+/** Desktop: HOME | MÚSICA | ... bar. Mobile: a no-JS <details> "[ MENU ]" list. */
 export function SiteNav() {
   const pathname = usePathname();
   const menu = useRef<HTMLDetailsElement>(null);

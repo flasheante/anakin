@@ -13,7 +13,7 @@ export const metadata: Metadata = pageMetadata({
 export default function PhotosPage() {
   return (
     <Section>
-      <PageHeader path="PHOTOS" title="PHOTO ARCHIVE">
+      <PageHeader path="FOTOS" title="ARCHIVO FOTOS">
         Tocá una foto para verla en grande y sin filtro.
       </PageHeader>
       <PhotoGrid />

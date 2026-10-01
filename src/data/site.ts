@@ -32,11 +32,11 @@ export const site = {
 
 export const navItems = [
   { href: "/", label: "HOME" },
-  { href: "/music", label: "MUSIC" },
+  { href: "/music", label: "MÚSICA" },
   { href: "/shows", label: "SHOWS" },
-  { href: "/band", label: "BAND" },
-  { href: "/photos", label: "PHOTOS" },
-  { href: "/contact", label: "CONTACT" },
+  { href: "/band", label: "BANDA" },
+  { href: "/photos", label: "FOTOS" },
+  { href: "/contact", label: "CONTACTO" },
 ] as const;
 
 /** Hit counter on abacus.jasoncameron.dev. Changing the namespace/key starts from zero. */
