@@ -44,7 +44,7 @@ export default function HomePage() {
       </Section>
 
       <Section labelledBy="home-band">
-        <SectionHead id="home-band" title="LA BANDA" href="/band" cta="LA BANDAA →" />
+        <SectionHead id="home-band" title="LA BANDA" href="/band" cta="LA BANDA →" />
         <BandIntro headingLevel={3} />
         <ul className="pixel mt-8 grid grid-cols-3 gap-2 text-center sm:gap-4">
           {members.map((m) => (
